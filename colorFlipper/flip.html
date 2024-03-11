@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta content="width=device-width, initial-scale=1.0"/>
+        <title>Color Flipper</title>
+        <!--CSS Stylesheet-->
+        <link rel="stylesheet" href="stylesheet_flip.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="toprow">
+                <h4>Color Flipper</h4>
+                <ul class="navigation">
+                    <li>
+                        <a href="flip.html">Simple</a>
+                    </li>
+                    <li>
+                        <a href="hex.html">Hex</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <!--container mit button und anzeige der farbe
+                button class -> btn + btnsimple
+                button id = btnsimple               button zur änderung hintergrundfarbe
+                span id = color                     anzeige der aktuellen hintergrundfarbe
+            -->
+            <div class="center">
+                <h2>Background Color: <span id="color">guaid</span></h2>
+                <button class="btn btnsimple" id="btnsimple">Click me</button>
+            </div>
+        </main>
+        <script src="JSflip.js"></script>
+    </body>
+</html>

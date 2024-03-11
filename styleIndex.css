@@ -6,11 +6,12 @@
     --primaryBackground: hsl(207, 47%, 38%);  
     --secondary-color-2: hsl(200, 80%, 60%);  
     --lightShadow: hsl(187, 48%, 41%);      
-    --TextColor: hsl(194, 38%, 69%);
+    --TextColor: hsl(193, 33%, 76%);
 }
 body {
     margin: 0;
-    background-color: var(--primaryBackground);
+    background-color: hsl(207, 67%, 65%);
+    height: 100%;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -85,7 +86,7 @@ h5 {
     outline: none;
     font-family: 'Ubuntu';
     border-radius: 3rem;
-    background-color: var(--secondary-color-2);
+    background-color: hsl(27, 50%, 51%);
     padding: 10px;
     box-shadow: 0 2px 12px var(--lightShadow);
     margin-top: 10px;
@@ -105,11 +106,19 @@ h5 {
     width: 75%;
     height: 100px;
     background: linear-gradient(to top, 
-    hsla(200, 80%, 60%, 0.629), transparent);
+    hsla(200, 74%, 25%, 0.629), transparent);
     border-radius: 0 0 08rem;
     margin-top: 5rem;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
     color: var(--TextColor);
+    
+}
+
+.projectDiv > a {
     text-decoration: none;
+    color: var(--TextColor);
+    text-shadow: 0 1px 3px black;
+    font-size: 36px;
+    margin-left: 3rem;
 }
