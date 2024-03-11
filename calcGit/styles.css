@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body {
+    background: linear-gradient(to right, hsl(238, 11%, 49%), hsl(230, 20%, 40%))
+}
+
+.calcGrid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calcGrid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgb(68, 90, 120);
+    outline: none;
+    background-color: hsla(240, 42%, 76%, 0.75);
+    border-radius: 50px;
+    margin: 5px;
+    color: hsl(0, 0%, 1%);
+}
+
+.calcGrid > button:hover {
+    background-color: hsla(240, 30%, 95%, 1);
+}
+
+.spantwo {
+    grid-column: span 2;
+}
+
+.interface {
+    background-color: hsla(229, 30%, 22%, 0.75);
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    color: hsl(35, 45%, 65%);
+    font-size: 1.8rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 5px;
+    padding: 1rem;
+    height: 150px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.interface .calcOp {
+    position: absolute;
+    top: 10px;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.interface .calcInp {
+    position: absolute;
+    bottom: 10px;
+    margin-top: 2rem;
+    font-size: 40px;
+}
