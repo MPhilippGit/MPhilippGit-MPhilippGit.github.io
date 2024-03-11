@@ -122,3 +122,10 @@ h5 {
     font-size: 36px;
     margin-left: 3rem;
 }
+
+
+.projectDiv > a:hover {
+    color: white;
+    font-size: 40px;
+    transition: 500ms;
+}
