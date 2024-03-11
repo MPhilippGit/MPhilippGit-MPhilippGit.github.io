@@ -11,9 +11,10 @@ class Calculator {
     }
 
     deleteNumber() {
-        if(this.prevElement.includes('=')){
+        if(this.prevElement.includes('=') || this.currentElement === 'Error'){
             this.currentElement= '';
         }
+        
 
         this.currentElement = this.currentElement.substr(0, this.currentElement.length-1);
     }
