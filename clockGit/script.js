@@ -19,6 +19,13 @@ const backgroundList = [
 
 let imageIndex = Math.floor(Math.random()*backgroundList.length);
 
+function loadBackgroundImage() {
+    document.body.style.backgroundImage = backgroundList[imageIndex]; 
+}
+
+loadBackgroundImage();
+
+
 function updateClock() {
     let h = new Date().getHours();
     let m = new Date().getMinutes();
@@ -61,7 +68,7 @@ function loadBackgroundImage() {
 
 
 updateClock();
-loadBackgroundImage();
+
 
 
 btnBackground.addEventListener('click', () => {
