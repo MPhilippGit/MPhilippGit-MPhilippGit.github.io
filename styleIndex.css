@@ -1,12 +1,10 @@
-* {
-    box-sizing: border-box;
-}
 :root {
     --darkerBackground: hsl(200, 38%, 23%);  
     --primaryBackground: hsl(207, 47%, 38%);  
     --secondary-color-2: hsl(200, 80%, 60%);  
     --lightShadow: hsl(187, 48%, 41%);      
-    --TextColor: hsl(193, 33%, 76%);
+    --TextColor: hsl(194, 45%, 77%);
+    --contrastColor: hsl(26, 60%, 60%);
 }
 body {
     margin: 0;
@@ -16,6 +14,76 @@ body {
     flex-direction: row;
     position: relative;
 }
+
+/* 
+kontaktinformationen */
+
+.contactInformation {
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box;
+    top: 20%;
+    bottom: 20%;
+    left: 30%;
+    width: 40%;
+    height: 60%;
+    background-color: hsla(187, 48%, 41%, 0.897);
+    border-radius:  3rem;
+    box-shadow: 0.3rem 0.3rem 15px rgba(14, 14, 14, 0.74);
+}
+
+.contactInformation > ul {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    list-style: none;
+    margin: 3rem;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    pointer-events: none;
+}
+
+.contactInformation > ul > li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3px;
+    color: var(--TextColor);
+    text-shadow: .2px .3px 2px black;
+}
+
+.contactInformation button {
+    position: absolute;
+    right: 2rem;
+    top: 2rem; 
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: .4px 2px 14px var(--contrastColor);
+    background-color: var(--primaryBackground);
+}
+
+.contactInformation button:hover {
+    cursor: pointer;
+    background-color: var(--TextColor);
+    color: var(--darkerBackground);
+    border: 2px solid var(--darkerBackground);
+}
+
+.contactInformation > ul > li > p > span {
+    color: var(--contrastColor);
+    position: absolute;
+    left: 10%;
+    font-size: 40px;
+    text-shadow: none;
+    pointer-events: none;
+}
+
 
 .sidePanel {
     margin: none;
@@ -32,15 +100,17 @@ body {
     top: 0;
     left: 0;
     font-family: 'Ubuntu', sans-serif;
+    transition: opacity 0.3s ease, width 0.3s ease;
+    opacity: 1;
 }
 
 header > h3 {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .sidePanel > p {
     margin-top: 20px;
-    text-align: center;
+    text-align: justify;
     width: 60%;
     font-size: 15px;
 }
@@ -63,57 +133,88 @@ h5 {
     position: relative;
 }
 
-@media screen and (max-width: 1181px) {
-    .sidePanel > p {
-        opacity: 0;
-        transition-duration: 300ms;
-    }
-    
-}
-@media screen and (max-width: 936px) {
-    .sidePanel > header > h3 {
-        opacity: 0;
-        transition-duration: 300ms;
-    }
-    .sidePanel > p {
-        display: none;
-    }
-    
-}
-
 .sidePanel > button {
     color: white;
+    text-shadow: 0 1px 3px black;
     outline: none;
     font-family: 'Ubuntu';
     border-radius: 3rem;
-    background-color: hsl(27, 50%, 51%);
+    background-color: var(--contrastColor);
     padding: 10px;
     box-shadow: 0 2px 12px var(--lightShadow);
     margin-top: 10px;
+
+    position: absolute;
+    bottom: 20%;
+}
+
+.sidePanel > button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 12px white;
 }
 
 .projectContent {
     position: relative;
     left: 25%;
-    width: 100%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transition: left 0.5s ease, width 0.5s ease;
 }
 
 .projectContent > div {
     display: flex;
-    width: 75%;
+    width: 100%;
     height: 100px;
     background: linear-gradient(to top, 
     hsla(200, 74%, 25%, 0.629), transparent);
-    border-radius: 0 0 08rem;
+    border-radius: 0 0 2rem;
     margin-top: 5rem;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
     color: var(--TextColor);
     
 }
+
+@media screen and (max-height: 775px),
+    screen and (max-width:936px)
+    {
+    .sidePanel {
+        opacity: 0;
+        transition: opacity, ease-out, 500ms;
+    }
+    .projectContent {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+    }
+    .projectContent > div {
+        width: 100%;
+    }   
+}
+
+@media screen and (max-width: 1181px) {
+    .sidePanel > p {
+        opacity: 0;
+        transition-duration: 500ms;
+    }
+    .sidePanel > button {
+        bottom: 40%;
+        transition: translate, ease-out, 500ms;
+    }  
+ }
+
+ @media screen and (max-width: 1709px), 
+    screen and (max-height: 936px)
+    {
+    .contactInformation {
+        opacity: 0;
+        transition: opacity, ease-in, 300ms;
+    }
+ }
+
+
 
 .projectDiv > a {
     text-decoration: none;
@@ -123,9 +224,15 @@ h5 {
     margin-left: 3rem;
 }
 
+.projectDiv > a > span {
+    font-size: 40px;
+    margin-right: 3rem;
+}
+
 
 .projectDiv > a:hover {
-    color: white;
+    color: var(--contrastColor);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.541);
     font-size: 40px;
-    transition: 500ms;
+    transition: ease-in-out 500ms;
 }
