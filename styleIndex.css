@@ -22,7 +22,7 @@ kontaktinformationen */
 
 .contactInformation {
     position: absolute;
-    display: 'none';
+    display: none;
     z-index: 1;
     transition: opacity, ease-in, 300ms;
     box-sizing: border-box;
