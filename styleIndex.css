@@ -33,7 +33,7 @@ kontaktinformationen */
     height: 25%;
     background-color: var(--primaryBackground);
     border-radius:  3rem;
-    box-shadow: 0.3rem 0.3rem 15px var(--lightShadow);
+    box-shadow: 0 0.3rem 15px var(--lightShadow);
 }
 
 .contactInformation > ul {
@@ -45,7 +45,6 @@ kontaktinformationen */
     list-style: none;
     margin: 3rem;
     font-size: 18px;
-    
     font-family: 'Ubuntu', sans-serif;
     pointer-events: none;
 }
@@ -69,15 +68,15 @@ kontaktinformationen */
     height: 40px;
     border: none;
     border-radius: 20px;
-    box-shadow: .4px 2px 14px var(--contrastColor);
-    background-color: var(--primaryBackground);
+    box-shadow: 0 0 8px var(--lightShadow);
+    background-color: var(--contrastColor);
 }
 
 .contactInformation button:hover {
     cursor: pointer;
     background-color: var(--TextColor);
     color: var(--darkerBackground);
-    border: 2px solid var(--darkerBackground);
+    border: 2px solid white;
 }
 
 .contactInformation > ul > li > span {
@@ -143,6 +142,7 @@ h5 {
     color: white;
     text-shadow: 0 1px 3px black;
     outline: none;
+    border: 1px solid var(--secondary-color-2);
     font-family: 'Ubuntu';
     border-radius: 3rem;
     background-color: var(--contrastColor);
@@ -156,6 +156,8 @@ h5 {
 
 .sidePanel > button:hover {
     cursor: pointer;
+    border: 2px solid white;
+    background-color: var(--TextColor);
     box-shadow: 0 0 12px white;
 }
 
