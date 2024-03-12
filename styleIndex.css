@@ -1,3 +1,5 @@
+
+
 :root {
     --darkerBackground: hsl(200, 38%, 23%);  
     --primaryBackground: hsl(207, 47%, 38%);  
@@ -21,15 +23,16 @@ kontaktinformationen */
 .contactInformation {
     position: absolute;
     z-index: 1;
+    transition: opacity, ease-in, 300ms;
     box-sizing: border-box;
-    top: 20%;
+    top: 30%;
     bottom: 20%;
-    left: 30%;
-    width: 40%;
-    height: 60%;
-    background-color: hsla(187, 48%, 41%, 0.897);
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-color: var(--primaryBackground);
     border-radius:  3rem;
-    box-shadow: 0.3rem 0.3rem 15px rgba(14, 14, 14, 0.74);
+    box-shadow: 0.3rem 0.3rem 15px var(--lightShadow);
 }
 
 .contactInformation > ul {
@@ -40,16 +43,17 @@ kontaktinformationen */
     position: relative;
     list-style: none;
     margin: 3rem;
-    font-size: 30px;
+    font-size: 18px;
+    
     font-family: 'Ubuntu', sans-serif;
     pointer-events: none;
 }
 
 .contactInformation > ul > li {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    text-align: left;
     margin: 3px;
     color: var(--TextColor);
     text-shadow: .2px .3px 2px black;
@@ -75,11 +79,12 @@ kontaktinformationen */
     border: 2px solid var(--darkerBackground);
 }
 
-.contactInformation > ul > li > p > span {
-    color: var(--contrastColor);
+.contactInformation > ul > li > span {
     position: absolute;
-    left: 10%;
-    font-size: 40px;
+    color: var(--contrastColor);
+    left: 0;
+    font-size: 30px;
+    margin-bottom: 0;
     text-shadow: none;
     pointer-events: none;
 }
