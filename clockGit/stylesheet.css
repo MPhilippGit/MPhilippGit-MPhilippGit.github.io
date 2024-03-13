@@ -75,3 +75,13 @@ button:hover {
     cursor: pointer;
     background-color: hsla(120, 2%, 9%, 0.976);
 }
+
+.preloadDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 500px;
+    pointer-events: none;
+    display: none;
+}

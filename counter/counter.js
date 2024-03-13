@@ -28,16 +28,7 @@ incbtn.addEventListener('click', function(){
     countNumber += 1;
     number.innerHTML = countNumber;
     console.log(document.querySelector("h1").innerHTML);
-    checkValue();
 });
-
-function checkValue() {
-    if (countNumber === 69) {
-        heading.textContent = "Counter(nice)";
-    } else {
-        heading.textContent = "Counter";
-    }
-}
 
 
 

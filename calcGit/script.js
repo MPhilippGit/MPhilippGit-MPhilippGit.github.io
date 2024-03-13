@@ -14,8 +14,6 @@ class Calculator {
         if(this.prevElement.includes('=') || this.currentElement === 'Error'){
             this.currentElement= '';
         }
-        
-
         this.currentElement = this.currentElement.substr(0, this.currentElement.length-1);
     }
 
