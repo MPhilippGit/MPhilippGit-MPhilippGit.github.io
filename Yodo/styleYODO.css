@@ -91,6 +91,7 @@ MAINBOSS STYLINGS */
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-style: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
