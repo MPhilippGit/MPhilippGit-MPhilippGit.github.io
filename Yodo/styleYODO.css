@@ -50,6 +50,7 @@ MAINBOSS STYLINGS */
     height: 100px;
     width: 100px;
     border-radius: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.521);
     position: absolute;
     right: 0;
     font-size: 20px;
