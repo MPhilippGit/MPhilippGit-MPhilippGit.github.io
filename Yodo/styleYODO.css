@@ -5,8 +5,12 @@ body {
     flex-direction: column;
     align-items: center;
     box-shadow: 0 4 8px black;
-    background-color: rgb(139, 137, 133);
+    margin: 0;
+    background-image: url('pictures/irrithyl.png');
+    background-attachment: fixed;
 }
+
+
 
 .area {
     box-sizing: border-box;
@@ -15,7 +19,14 @@ body {
 
 h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    
+    left: 0rem;
+    top: 0rem;
+    font-size: 25px;
+    background-color: hsl(227, 28%, 29%);
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 0 4px 12px white;
 }
 
 /* 
@@ -30,27 +41,31 @@ MAINBOSS STYLINGS */
     height: 90px;
     width: auto;
     position: relative;
-    background-color: azure;   
+    background-color: hsl(221, 27%, 56%);
+    border-radius: 40px;   
 }
 
 .mainboss > img {
     height: 100px;
     width: 100px;
-    border-radius: 50px;
+    border-radius: 40px;
     position: absolute;
     left: 0;
+    top: 0;
 }
 
 .mainboss > p {
     font-size: 25px;
+    font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .mainboss > button {
     height: 100px;
     width: 100px;
-    border-radius: 50px;
-    border: 5px solid rgba(0, 0, 0, 0.521);
+    border-radius: 40px;
+    background-color: hsl(194, 41%, 57%);
+    border: 4px solid rgba(0, 0, 0, 0.521);
     position: absolute;
     right: 0;
     font-size: 20px;
@@ -76,6 +91,7 @@ MAINBOSS STYLINGS */
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -88,6 +104,7 @@ MAINBOSS STYLINGS */
 .miniboss > button {
     height: 30px;
     width: 80px;
+    background-color: hsl(194, 41%, 57%);
     border-radius: 30px;
     margin: 4px;
 }
@@ -115,20 +132,23 @@ color: #fff;
 
 .punktestand {
     position: fixed;
-    left: 1rem;
-    top: 2rem;
-    font-size: 30px;
-    background-color: rgb(103, 103, 158);
+    left: 0rem;
+    top: 0rem;
+    font-size: 50px;
+    background-color: hsl(227, 28%, 29%);
     padding: 1rem;
-    color: #fff;
-    border-radius: 20px;
+    color: white;
+    text-shadow: 0 2px 6px black;
+    box-shadow: 0 4px 12px white;
 }
+
+/* restliche Punkte */
 
 .npcInvasions {
     left: 1rem;
     top: 20rem;
     font-size: 30px;
-    background-color: rgb(103, 103, 158);
+    background-color: hsl(194, 41%, 57%);
     color: #fff;
     border-radius: 20px;
     width: 200px;
@@ -148,7 +168,17 @@ color: #fff;
 }
 
 .npcBTNs > button {
+    font-size: 10px;
     height: 30px;
     width: 30px;
+    margin-top: 3px;
     border-radius: 30px;
+    background-color: hsl(194, 41%, 57%);
+}
+
+.npcBTNs > button:hover {
+    cursor: pointer;
+    border: 5px solid green;
+    background-color: white;
+    box-shadow: 0 4px 10px green;  
 }
