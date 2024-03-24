@@ -51,15 +51,14 @@ MAINBOSS STYLINGS */
     width: 100px;
     border-radius: 50px;
     position: absolute;
-    left: 0;
-    opacity: 0.1;
+    right: 0;
     font-size: 20px;
 }
 
 .mainboss > button:hover {
     cursor: pointer;
     border: 5px solid green;
-    background-color: black;
+    background-color: white;
     box-shadow: 0 4px 10px green;   
 }
 /* MINIBOSS STYLINGS */
@@ -87,15 +86,22 @@ MAINBOSS STYLINGS */
 
 .miniboss > button {
     height: 30px;
-    width: 30px;
+    width: 80px;
     border-radius: 30px;
     margin: 4px;
+}
+
+.miniboss > button:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid green;
+    background-color: white;
+    box-shadow: 0 4px 10px green;  
 }
 
 .bossCheck.active {
     background-color: hsl(113, 59%, 54%);
     color: #fff;
-    opacity: 0.3;
   }
 
 .minibossCheck.active {

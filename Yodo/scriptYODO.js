@@ -56,6 +56,7 @@ npcPlus.addEventListener('click', function(){
 });
 
 npcMinus.addEventListener('click', function(){
+    if (npcCounter === 0) { return}
     points -= 1;
     npcCounter -= 1;
     updatePoints();
