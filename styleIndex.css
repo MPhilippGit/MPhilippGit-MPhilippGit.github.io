@@ -6,7 +6,7 @@
     --secondary-color-2: hsl(229, 80%, 60%);  
     --lightShadow: hsl(0, 13%, 19%);      
     --TextColor: hsl(210, 2%, 16%);
-    --contrastColor: hsl(29, 70%, 44%);
+    --contrastColor: hsl(175, 49%, 31%);
 }
 body {
     margin: 0;
@@ -152,7 +152,6 @@ h5 {
     color: white;
     text-shadow: 0 1px 3px rgb(0, 0, 0);
     outline: none;
-    border: 1px solid var(--secondary-color-2);
     font-family: 'Ubuntu';
     border-radius: 3rem;
     background-color: var(--contrastColor);
