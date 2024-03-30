@@ -1,16 +1,16 @@
 
 
 :root {
-    --darkerBackground: hsl(200, 38%, 23%);  
-    --primaryBackground: hsl(207, 47%, 38%);  
-    --secondary-color-2: hsl(200, 80%, 60%);  
-    --lightShadow: hsl(187, 48%, 41%);      
-    --TextColor: hsl(194, 45%, 77%);
-    --contrastColor: hsl(26, 60%, 60%);
+    --darkerBackground: hwb(202 31% 36%);  
+    --primaryBackground: hsl(207, 28%, 32%);  
+    --secondary-color-2: hsl(229, 80%, 60%);  
+    --lightShadow: hsl(0, 13%, 19%);      
+    --TextColor: hsl(210, 2%, 16%);
+    --contrastColor: hsl(29, 70%, 44%);
 }
 body {
     margin: 0;
-    background-color: hsl(207, 67%, 65%);
+    background-color: hsl(209, 43%, 81%);
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -26,10 +26,10 @@ kontaktinformationen */
     z-index: 1;
     transition: opacity, ease-in, 300ms;
     box-sizing: border-box;
+    width: 100%;
     top: 30%;
     bottom: 20%;
     left: 0;
-    width: 100%;
     height: 25%;
     background-color: var(--primaryBackground);
     border-radius:  3rem;
@@ -49,20 +49,29 @@ kontaktinformationen */
     pointer-events: none;
 }
 
+.material-symbols-outlined {
+    color: var(--contrastColor);
+    text-shadow: 0 1px .4px rgb(255, 255, 255);
+}
+
+.contactCloseButton {
+    color: white;
+    text-shadow: none;
+}
+
 .contactInformation > ul > li {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: left;
     margin: 3px;
-    color: var(--TextColor);
-    text-shadow: .2px .3px 2px black;
+    color: hsl(209, 46%, 77%);
 }
 
 .contactInformation button {
     position: absolute;
     right: 2rem;
-    top: 2rem; 
+    top: 2rem;
     outline: none;
     width: 40px;
     height: 40px;
@@ -75,7 +84,7 @@ kontaktinformationen */
 .contactInformation button:hover {
     cursor: pointer;
     background-color: var(--TextColor);
-    color: var(--darkerBackground);
+    color: var(--contrastColor);
     border: 2px solid white;
 }
 
@@ -101,7 +110,6 @@ kontaktinformationen */
     background: linear-gradient(to top, var(--primaryBackground), var(--darkerBackground));
     position: fixed;
     color: var(--TextColor);
-    text-shadow: 0 0.2px 1.5px hsl(185, 9%, 23%);
     top: 0;
     left: 0;
     font-family: 'Ubuntu', sans-serif;
@@ -111,11 +119,13 @@ kontaktinformationen */
 
 header > h3 {
     font-size: 30px;
+    color: white;
 }
 
 .sidePanel > p {
     margin-top: 20px;
     text-align: justify;
+    color: white;
     width: 60%;
     font-size: 15px;
 }
@@ -140,7 +150,7 @@ h5 {
 
 .sidePanel > button {
     color: white;
-    text-shadow: 0 1px 3px black;
+    text-shadow: 0 1px 3px rgb(0, 0, 0);
     outline: none;
     border: 1px solid var(--secondary-color-2);
     font-family: 'Ubuntu';
@@ -173,16 +183,13 @@ h5 {
 
 .projectContent > div {
     display: flex;
-    width: 100%;
+    width: 60%;
     height: 100px;
-    background: linear-gradient(to top, 
-    hsla(200, 74%, 25%, 0.629), transparent);
-    border-radius: 0 0 2rem;
+    box-shadow: 0 3px 5px var(--darkerBackground);
     margin-top: 5rem;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
-    color: var(--TextColor);
-    
+    color: var(--TextColor);  
 }
 
 @media screen and (max-height: 775px),
@@ -227,7 +234,7 @@ h5 {
 .projectDiv > a {
     text-decoration: none;
     color: var(--TextColor);
-    text-shadow: 0 1px 3px black;
+    text-shadow: 0 1px .5px var(--lightShadow);
     font-size: 36px;
     margin-left: 3rem;
 }
