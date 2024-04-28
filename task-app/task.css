@@ -13,6 +13,7 @@
     --lightness-70: hsl(var(--base-hue), 56%, 70%);
     --lightness-90: hsl(var(--base-hue), 56%, 90%);
   }
+/* 
 nav bar top   */
 .home {
     position: absolute;
@@ -35,7 +36,7 @@ nav bar top   */
 }
 
 .home > a:hover {
-    color: hsl(142, 69%, 43%);
+    color: hsl(263, 64%, 59%);
     text-shadow: 0 0 2px hsl(219, 60%, 60%);
 }
 
@@ -61,8 +62,8 @@ Input section */
     width: 100%;
     max-width: 540px;
     margin: 130px auto 10px;
-    background-color: var(--lightness-70);
-    box-shadow: 3px 0px 16px rgb(33, 174, 184);
+    background-color: var(--lightness-50);
+    box-shadow: 3px 0px 16px rgb(72, 55, 146);
     padding: 100px;
     border-radius: 1.2rem;
 }
@@ -80,7 +81,7 @@ Input section */
     width: 100%;
     height: 30px;
     border-radius: 15px;
-    background-color: var(--lightness-50);
+    background-color: hsl(257, 22%, 33%);
 }
 
 .taskapp > .input-form > form > input::placeholder {
@@ -181,7 +182,7 @@ section mit der Taskliste
     height: 30px;
     width: 30px;
     border-radius: 15px;
-    background-color: hsl(276, 57%, 31%);
+    background-color: hsl(263, 15%, 22%);
     border: none;
     z-index: 2;
 }
