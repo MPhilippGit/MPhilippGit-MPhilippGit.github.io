@@ -13,6 +13,32 @@
     --lightness-70: hsl(var(--base-hue), 56%, 70%);
     --lightness-90: hsl(var(--base-hue), 56%, 90%);
   }
+nav bar top   */
+.home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsl(218, 52%, 85%);
+    height: 80px;
+    box-shadow: 0 0 15px black;
+}
+
+  .home > a {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: hsl(235, 15%, 32%);
+    font-size: 30px;
+}
+
+.home > a:hover {
+    color: hsl(142, 69%, 43%);
+    text-shadow: 0 0 2px hsl(219, 60%, 60%);
+}
+
 
 body {
     background-color: var(--lightness-30);
@@ -27,7 +53,8 @@ body {
     background-size: cover;
     
 }
-
+/* 
+Input section */
 .taskapp {
     position: relative;
     
@@ -59,7 +86,6 @@ body {
 .taskapp > .input-form > form > input::placeholder {
     color: hsl(var(--base-hue), 80%, 30%);
 }
-
 
 .taskapp > .input-form > input {
     flex: 1;
@@ -137,39 +163,33 @@ section mit der Taskliste
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 500px;
+    width: 540px;
 }
 
 .taskStyling > table > tr, td {
     display: flex;
+    position: relative;
     justify-content: space-around;
     width: 100%;
     padding: 8px;
+    
 }
 
-
-
-.home {
+.taskStyling > table > tr > button {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: hsl(218, 52%, 85%);
-    height: 80px;
-    box-shadow: 0 0 15px black;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: hsl(276, 57%, 31%);
+    border: none;
+    z-index: 2;
 }
 
-.home > a {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: hsl(235, 15%, 32%);
-    font-size: 30px;
+.taskStyling > table > tr > button:hover {
+    cursor: pointer;
+    border: 2px solid white;
 }
 
-.home > a:hover {
-    color: hsl(142, 69%, 43%);
-    text-shadow: 0 0 2px hsl(219, 60%, 60%);
-}
+
+

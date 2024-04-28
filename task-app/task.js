@@ -11,6 +11,10 @@ submitBtn.addEventListener('click' ,() => {
     taskId+=1;
     toString(taskId);
 
+    if(date == '') {
+        date = 'no date';
+    }
+
     console.log(typeof(date));
     createListElements(task, date, taskId);
 });
@@ -27,6 +31,7 @@ function createListElements(tasks, dates){
     newDate.innerText = dates;
     deleteBtn.id = 'btn' + taskId;
     deleteBtn.innerText = '❌';
+    
 
     newItem.appendChild(deleteBtn);
     newItem.appendChild(newTask);
@@ -34,8 +39,11 @@ function createListElements(tasks, dates){
     newItem.id = taskId;
 
     unorderedList.appendChild(newItem);
+    
+    deleteBtn.addEventListener('click', () => {
+        newItem.parentNode.removeChild(newItem);
+    });
 
-    console.log(newTask.innerText);
-    console.log(dates);
+    console.log(deleteBtn.id);
+    console.log(typeof(newItem.id));
 }
-
