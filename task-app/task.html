@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="task.css">
+    <title>Task-App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="taskapp">
+            <h2>To-Do List 
+                <span class="material-symbols-outlined">rule</span>
+            </h2>
+                <div class="input-form">               
+                    <input type="text" name="" id="taskInput" placeholder="Add your task here" required>  
+                    <input type="date" name="dueTo" id="dateInput" class="taskDue" required>
+                    <button class="inputBtn" id="inputBtn">Add</button>
+                </div>
+                <div class="taskStyling">
+                    <table id="taskList">
+                        <tr class="tablehead">
+                            <th>Task</th>
+                            <th>Due date</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>        
+    </div>
+    <script src="task.js"></script>
+</body>
+</html>

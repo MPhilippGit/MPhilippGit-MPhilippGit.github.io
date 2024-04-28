@@ -1,0 +1,175 @@
+* {
+    font-family: "Exo 2", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --base-hue: 210; /* Hue value for blue */
+    --lightness-10: hsl(var(--base-hue), 56%, 10%);
+    --lightness-30: hsl(var(--base-hue), 56%, 30%);
+    --lightness-50: hsl(var(--base-hue), 56%, 50%);
+    --lightness-70: hsl(var(--base-hue), 56%, 70%);
+    --lightness-90: hsl(var(--base-hue), 56%, 90%);
+  }
+
+body {
+    background-color: var(--lightness-30);
+}
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--lightness-10), var(--lightness-30));
+    background-size: cover;
+    
+}
+
+.taskapp {
+    position: relative;
+    
+    width: 100%;
+    max-width: 540px;
+    margin: 130px auto 10px;
+    background-color: var(--lightness-70);
+    box-shadow: 3px 0px 16px rgb(33, 174, 184);
+    padding: 100px;
+    border-radius: 1.2rem;
+}
+
+.taskapp > h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.taskapp > .input-form {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--lightness-50);
+}
+
+.taskapp > .input-form > form > input::placeholder {
+    color: hsl(var(--base-hue), 80%, 30%);
+}
+
+
+.taskapp > .input-form > input {
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    
+}
+
+form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+
+.input-form > button {
+    position: absolute;
+    box-sizing: border-box;
+    right: 0px;
+    height: 30px;
+    border-radius: 0 15px 15px 0;
+    color: hsl(var(--base-hue), 100%, 10%);
+    outline: none;
+    border: none;
+    padding: 0 5px 0 5px;
+    background-color: hsl(var(--base-hue), 100%, 80%);
+}
+
+.input-form > .taskDue {
+    position: absolute;
+    font-size: none;
+    right: 10%;
+    padding: none;
+    margin-top: 3px;
+}
+
+.input-form > button:hover {
+    background-color: aliceblue;
+    border: 1px solid white;
+    color: hsl(283, 62%, 24%);
+    cursor: pointer;
+}
+
+/* 
+section mit der Taskliste 
+*/
+.taskStyling {
+    margin-top: 2rem;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    background-color: hsla(210, 86%, 70%, 0.37);
+    border-radius: 1.2rem;
+    width: 540px;
+    text-align: center;
+    color: var(--lightness-10);
+
+}
+
+.taskStyling > table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;    
+}
+
+.tablehead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500px;
+}
+
+.taskStyling > table > tr, td {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 8px;
+}
+
+
+
+.home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsl(218, 52%, 85%);
+    height: 80px;
+    box-shadow: 0 0 15px black;
+}
+
+.home > a {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: hsl(235, 15%, 32%);
+    font-size: 30px;
+}
+
+.home > a:hover {
+    color: hsl(142, 69%, 43%);
+    text-shadow: 0 0 2px hsl(219, 60%, 60%);
+}
